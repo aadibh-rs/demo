@@ -1,0 +1,70 @@
+# =========================this is my dummy test thishish
+# WORKFLOW NAME
+# =========================
+# This is the name of the workflow.
+# You will see this name in the GitHub "Actions" tab.
+name: Simple GitHub Action Example
+
+# =========================
+# TRIGGER / EVENT
+# =========================
+# "on" defines WHEN this workflow should run.
+# "push" is the EVENT.
+# This means: run this workflow whenever code is pushed to the repository.
+on:
+  push:
+
+# =========================
+# JOBS SECTION
+# =========================
+# A workflow can have one or more jobs.
+jobs:
+
+  # -------------------------
+  # JOB NAME / JOB ID
+  # -------------------------
+  # This is the job name (ID).
+  # It can be anything, but no spaces are allowed.
+  say-hello:
+
+    # -------------------------
+    # RUNNER / MACHINE
+    # -------------------------
+    # This tells GitHub which virtual machine to use.
+    # "ubuntu-latest" is a Linux machine provided by GitHub.
+    runs-on: ubuntu-latest
+
+    # -------------------------
+    # STEPS SECTION
+    # -------------------------
+    # A job is made up of steps.
+    # Steps run one after another.
+    steps:
+
+      # =========================
+      # STEP 1
+      # =========================
+      # This step downloads (checks out) your repository code
+      # into the virtual machine.
+      - name: Checkout repository   # This is the STEP NAME
+        uses: actions/checkout@v4   # This uses a pre-built GitHub Action
+
+      # =========================
+      # STEP 2
+      # =========================
+      # This step runs a shell command.
+      # "run" is used to execute commands.
+      - name: Print a message       # Step name shown in logs
+        run: echo "Hello! GitHub Action is running by Arjun Sahi"
+
+      # =========================
+      # STEP 3
+      # =========================
+      # This step runs multiple commands.
+      # The "|" symbol allows multiple lines.
+      - name: Show system details
+        run: |
+          echo "Today's date is:"
+          date
+          echo "Current folder path:"
+          pwd
