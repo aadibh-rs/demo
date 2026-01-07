@@ -55,7 +55,7 @@ jobs:
       # This step runs a shell command.
       # "run" is used to execute commands.
       - name: Print a message       # Step name shown in logs
-        run: echo "Hello! GitHub Action is running by Arjun Sahi"
+        run: echo "Hello! GitHub Action is running by Aadi Bhardwaj"
 
       # =========================
       # STEP 3
