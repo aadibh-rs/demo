@@ -1,0 +1,34 @@
+name: Practice code
+
+on:
+  push:
+
+
+jobs:
+  check_verisons:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository 1
+        uses: actions/checkout@v1
+      
+      - name: Checkout repository 2
+        uses: actions/checkout@v2
+      
+      - name: Checkout repository 3
+        uses: actions/checkout@v3
+      
+      - name: Checkout repository 4
+        uses: actions/checkout@v4
+      
+      - name: Checkout repository 5
+        uses: actions/checkout@v5
+
+  multiple-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Multiple command
+        run: |
+          echo "Date and time is:"
+          date
+          echo "who is present"
+          whoami
