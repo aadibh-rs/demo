@@ -13,4 +13,5 @@ jobs:
         run: |
           echo "running inside schedule from cron"
 
-          echo "executed at $(date)""
+          echo "executed at $(date)"
+
