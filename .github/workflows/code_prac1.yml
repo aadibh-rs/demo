@@ -21,7 +21,7 @@ jobs:
       #   uses: actions/checkout@v4
       
       - name: Checkout repository 6
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
   multiple-commands:
     runs-on: ubuntu-latest
@@ -33,4 +33,5 @@ jobs:
           echo "who is present"
 
           whoami
+
 
