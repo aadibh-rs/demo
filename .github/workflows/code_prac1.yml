@@ -20,8 +20,8 @@ jobs:
       # - name: Checkout repository 4
       #   uses: actions/checkout@v4
       
-      - name: Checkout repository 5
-        uses: actions/checkout@v5
+      - name: Checkout repository 6
+        uses: actions/checkout@v6
 
   multiple-commands:
     runs-on: ubuntu-latest
@@ -33,3 +33,4 @@ jobs:
           echo "who is present"
 
           whoami
+
